@@ -47,8 +47,10 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (setq inhibit-splash-screen 1)
+(global-auto-revert-mode 1)
 (global-linum-mode 1)
 (global-company-mode 1)
+(setq auto-save-default nil)
 (setq make-backup-files nil)
 (setq-default cursor-type 'bar)
 
