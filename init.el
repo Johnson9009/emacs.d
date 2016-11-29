@@ -14,6 +14,7 @@
 			   swiper
 			   counsel
 			   smartparens
+			   popwin
 			   ) "Default packages")
 (defun johnson/packages-installed-p ()
   (loop for pkg in johnson/packages
@@ -43,6 +44,9 @@
 (require 'smartparens)
 (smartparens-global-mode 1)
 
+;;Config for popwin
+(require 'popwin)
+(popwin-mode 1)
 
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
