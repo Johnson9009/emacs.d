@@ -28,4 +28,29 @@
         (message "Indented buffer.")))))
 
 
+(setq hippie-expand-try-functions-list '(try-expand-dabbrev
+					 try-expand-dabbrev-all-buffers
+					 try-expand-dabbrev-from-kill
+					 try-complete-file-name-partially
+					 try-complete-file-name
+					 try-expand-all-abbrevs
+					 try-expand-list
+					 try-expand-line
+					 try-complete-lisp-symbol-partially
+					 try-complete-lisp-symbol))
+
+;;Used for dired-mode
+(fset 'yes-or-no-p 'y-or-n-p)
+(setq dired-recursive-copies 'always)
+(setq dired-recursive-deletes 'always)
+
+;;Prevent dired-mode to create so many different temporary buffers.
+(put 'dired-find-alternate-file 'disabled nil)
+
+;;Open dired-mode with current file's path.
+(require 'dired-x)
+
+;;Copy files between two dired-mode.
+(setq dired-dwim-target 1)
+
 (provide 'init-better-defaults)
