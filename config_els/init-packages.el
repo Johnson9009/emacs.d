@@ -33,6 +33,7 @@
 
 ;;Config for smartparens
 (smartparens-global-mode 1)
+(sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
 
 ;;Config for popwin
 (require 'popwin)

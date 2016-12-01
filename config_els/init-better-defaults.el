@@ -8,6 +8,14 @@
 
 (recentf-mode 1)
 
+;;Highlighten parentheses whenever the cursor is.
+(define-advice show-paren-function (:around (fn) fix-show-paren-function)
+  "Highlight enclosing parentheses."
+  (cond ((looking-at-p "\\s(") (funcall fn))
+	(t (save-excursion
+	     (ignore-errors (backward-up-list))
+	     (funcall fn)))))
+
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 
 (defun indent-buffer ()
@@ -52,5 +60,8 @@
 
 ;;Copy files between two dired-mode.
 (setq dired-dwim-target 1)
+
+;;Remove Windows' end mark of line.
+;;Just use "C-x RET f unix" to set the file encoding can make sense.
 
 (provide 'init-better-defaults)
