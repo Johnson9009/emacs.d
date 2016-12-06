@@ -12,6 +12,7 @@
 			   counsel
 			   smartparens
 			   popwin
+			   xcscope
 			   
 			   ) "Default packages")
 
@@ -38,6 +39,10 @@
 ;;Config for popwin
 (require 'popwin)
 (popwin-mode 1)
+
+;;Config for xcscope
+(require 'xcscope)
+(cscope-setup)
 
 (load-theme 'monokai t)
 
