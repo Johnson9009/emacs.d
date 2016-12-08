@@ -64,4 +64,7 @@
 ;;Remove Windows' end mark of line.
 ;;Just use "C-x RET f unix" to set the file encoding can make sense.
 
+;;Enable mouse operation when emacs is used in a terminal.
+(xterm-mouse-mode 1)
+
 (provide 'init-better-defaults)
