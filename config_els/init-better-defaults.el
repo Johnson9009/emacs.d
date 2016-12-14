@@ -6,8 +6,6 @@
 (setq auto-save-default nil)
 (setq make-backup-files nil)
 
-(recentf-mode 1)
-
 ;;Highlighten parentheses whenever the cursor is.
 (define-advice show-paren-function (:around (fn) fix-show-paren-function)
   "Highlight enclosing parentheses."
