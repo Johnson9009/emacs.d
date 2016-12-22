@@ -60,7 +60,7 @@
 (setq dired-dwim-target 1)
 
 ;;Set default font type and size.
-(set-default-font "DejaVu Sans Mono-15")
+(set-default-font "-*-DejaVu Sans Mono-normal-normal-normal-*-16-*-*-*-m-0-iso10646-1")
 
 ;;Remove Windows' end mark of line.
 ;;Just use "C-x RET f unix" to set the file encoding can make sense.
