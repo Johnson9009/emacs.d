@@ -59,6 +59,9 @@
 ;;Copy files between two dired-mode.
 (setq dired-dwim-target 1)
 
+;;Set default font type and size.
+(set-default-font "DejaVu Sans Mono-15")
+
 ;;Remove Windows' end mark of line.
 ;;Just use "C-x RET f unix" to set the file encoding can make sense.
 
