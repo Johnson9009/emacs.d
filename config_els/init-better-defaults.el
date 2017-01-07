@@ -6,13 +6,16 @@
 (setq auto-save-default nil)
 (setq make-backup-files nil)
 
+;;This function only can be used on 25.1, it will cause 24.5 initing crash, so
+;;just comment it now.
+
 ;;Highlighten parentheses whenever the cursor is.
-(define-advice show-paren-function (:around (fn) fix-show-paren-function)
-  "Highlight enclosing parentheses."
-  (cond ((looking-at-p "\\s(") (funcall fn))
-	(t (save-excursion
-	     (ignore-errors (backward-up-list))
-	     (funcall fn)))))
+;(define-advice show-paren-function (:around (fn) fix-show-paren-function)
+;  "Highlight enclosing parentheses."
+;  (cond ((looking-at-p "\\s(") (funcall fn))
+;	(t (save-excursion
+;	     (ignore-errors (backward-up-list))
+;	     (funcall fn)))))
 
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 
