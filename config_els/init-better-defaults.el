@@ -71,4 +71,7 @@
 ;;Enable mouse operation when emacs is used in a terminal.
 (xterm-mouse-mode 1)
 
+;;Smooth Scrolling
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
+
 (provide 'init-better-defaults)
