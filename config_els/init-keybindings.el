@@ -12,6 +12,9 @@
 
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
 
+;;Insert spaces instead of TAB.
+(global-set-key (kbd "TAB") 'tab-to-tab-stop)
+
 ;;Prevent dired-mode to create so many different temporary buffers.
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))

@@ -19,6 +19,12 @@
 
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 
+;;Insert 4 spaces instead of TAB.
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+(setq tab-stop-list (number-sequence 4 120 4))
+(defvaralias 'c-basic-offset 'tab-width)
+
 (defun indent-buffer ()
   "Indent all lines of current buffer."
   (interactive)
