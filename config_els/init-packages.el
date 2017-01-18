@@ -31,6 +31,7 @@
 ;;Config for swiper
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
+(setq ivy-ignore-buffers '("\\` " "\\`\\*"))
 
 ;;Config for smartparens
 (smartparens-global-mode 1)
@@ -47,5 +48,27 @@
 (load-theme 'monokai t)
 
 (global-company-mode 1)
+
+;;Cycling file buffers.
+(defun switch-file-buffer (switch-buffer)
+  "Call switch-buffer until current buffer is not non-file associated buffer."
+  (interactive)
+  (let ((bread-crumb (buffer-name)))
+    (funcall switch-buffer)
+    (while
+        (and
+         (string-match-p "^\*" (buffer-name))
+         (not (equal bread-crumb (buffer-name))))
+      (funcall switch-buffer))))
+
+(defun next-file-buffer ()
+  "Switch to next file associated buffer."
+  (interactive)
+  (switch-file-buffer 'next-buffer))
+
+(defun previous-file-buffer ()
+  "Switch to previous file associated buffer."
+  (interactive)
+  (switch-file-buffer 'previous-buffer))
 
 (provide 'init-packages)

@@ -11,6 +11,8 @@
 (global-set-key (kbd "s-/") 'hippie-expand)
 
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
+(global-set-key (kbd "C-x n") 'next-file-buffer)
+(global-set-key (kbd "C-x p") 'previous-file-buffer)
 
 ;;Insert spaces instead of TAB.
 (global-set-key (kbd "TAB") 'tab-to-tab-stop)
