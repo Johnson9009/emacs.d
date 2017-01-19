@@ -13,7 +13,7 @@
 			   smartparens
 			   popwin
 			   xcscope
-			   
+			   undo-tree
 			   ) "Default packages")
 
 (defun johnson/packages-installed-p ()
@@ -44,6 +44,10 @@
 ;;Config for xcscope
 (require 'xcscope)
 (cscope-setup)
+
+;;Config for undo-tree
+(require 'undo-tree)
+(global-undo-tree-mode)
 
 (load-theme 'monokai t)
 
