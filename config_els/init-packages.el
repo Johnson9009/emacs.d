@@ -14,6 +14,7 @@
 			   popwin
 			   xcscope
 			   undo-tree
+               origami
 			   ) "Default packages")
 
 (defun johnson/packages-installed-p ()
@@ -48,6 +49,10 @@
 ;;Config for undo-tree
 (require 'undo-tree)
 (global-undo-tree-mode)
+
+;;Config for origami
+(require 'origami)
+(global-origami-mode)
 
 (load-theme 'monokai t)
 

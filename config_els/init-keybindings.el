@@ -19,6 +19,8 @@
 
 (global-set-key (kbd "M-/") 'undo-tree-redo)
 
+(global-set-key (kbd "C-o") 'origami-toggle-node)
+
 ;;Prevent dired-mode to create so many different temporary buffers.
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
