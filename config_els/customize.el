@@ -7,7 +7,8 @@
  '(company-idle-delay 0.08)
  '(package-selected-packages
    (quote
-    (xcscope smartparens popwin monokai-theme counsel company))))
+    (xcscope smartparens popwin monokai-theme counsel company)))
+ '(whitespace-line-column 120))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
