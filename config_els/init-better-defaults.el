@@ -80,6 +80,9 @@
 ;;Smooth Scrolling
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
 
+;;Modify line wrapping character from '\' to '↩'
+(set-display-table-slot standard-display-table 'wrap ?\↩)
+
 ;;Whitespace minor mode use buffer-display-table directly, so we need to add a hook.
 (defun modify-line-wrap ()
   (set-display-table-slot buffer-display-table 'wrap ?\↩))
