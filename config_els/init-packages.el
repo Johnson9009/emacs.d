@@ -6,21 +6,21 @@
 
 ;;Add whatever packages you want here
 (defvar johnson/packages '(
-			   company
-			   monokai-theme
-			   swiper
-			   counsel
-			   smartparens
-			   popwin
-			   xcscope
-			   undo-tree
+               company
+               monokai-theme
+               swiper
+               counsel
+               smartparens
+               popwin
+               xcscope
+               undo-tree
                origami
-			   ) "Default packages")
+               ) "Default packages")
 
 (defun johnson/packages-installed-p ()
   (loop for pkg in johnson/packages
-	when (not (package-installed-p pkg)) do (return nil)
-	finally (return t)))
+    when (not (package-installed-p pkg)) do (return nil)
+    finally (return t)))
 
 (unless (johnson/packages-installed-p)
   (message "%s" "Refreshing package database...")
@@ -53,6 +53,9 @@
 ;;Config for origami
 (require 'origami)
 (global-origami-mode)
+
+;;Config for xclip
+(xclip-mode 1)
 
 (load-theme 'monokai t)
 
