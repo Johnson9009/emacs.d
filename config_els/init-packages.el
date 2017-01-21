@@ -15,6 +15,7 @@
                xcscope
                undo-tree
                origami
+               expand-region
                ) "Default packages")
 
 (defun johnson/packages-installed-p ()
@@ -56,6 +57,9 @@
 
 ;;Config for xclip
 (xclip-mode 1)
+
+;;Config for expand-region
+(require 'expand-region)
 
 (load-theme 'monokai t)
 
