@@ -21,7 +21,7 @@
 
 (global-set-key (kbd "C-o") 'origami-toggle-node)
 
-(global-set-key (kbd "C-=") 'er/expand-region)
+(global-set-key (kbd "C-c e") 'er/expand-region)
 
 ;;Prevent dired-mode to create so many different temporary buffers.
 (with-eval-after-load 'dired
