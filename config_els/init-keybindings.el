@@ -1,3 +1,12 @@
+(defun global-set-escape-sequence-key (key command)
+  "Map escape sequence to KEY then `global-set-key' KEY with COMMAND."
+  (map-escape-sequence-key key)
+  (global-set-key (kbd key) command))
+
+(defun map-escape-sequence-key (key)
+  "Map KEY from escape sequence \"\e[emacs-KEY\"."
+  (define-key function-key-map (concat "\e[emacs-" key) (kbd key)))
+
 ;;Key Binding for Swiper.
 (global-set-key "\C-s" 'swiper)
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
@@ -21,7 +30,7 @@
 
 (global-set-key (kbd "C-o") 'origami-toggle-node)
 
-(global-set-key (kbd "C-=") 'er/expand-region)
+(global-set-key (kbd "C-c e") 'er/expand-region)
 
 ;;Prevent dired-mode to create so many different temporary buffers.
 (with-eval-after-load 'dired
