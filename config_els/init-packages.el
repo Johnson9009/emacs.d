@@ -16,6 +16,7 @@
                undo-tree
                origami
                expand-region
+               tabbar
                ) "Default packages")
 
 (defun johnson/packages-installed-p ()
@@ -60,6 +61,9 @@
 
 ;;Config for expand-region
 (require 'expand-region)
+
+;;Config for tabbar
+(tabbar-mode 1)
 
 (load-theme 'monokai t)
 
