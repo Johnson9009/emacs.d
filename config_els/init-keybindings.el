@@ -19,7 +19,7 @@
 
 (global-set-key (kbd "s-/") 'hippie-expand)
 
-(global-set-key (kbd "C-x k") 'kill-this-buffer)
+(global-set-key (kbd "C-x k") 'kill-buffer-and-window)
 (global-set-key (kbd "C-x n") 'next-file-buffer)
 (global-set-key (kbd "C-x p") 'previous-file-buffer)
 
