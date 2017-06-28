@@ -17,6 +17,9 @@
                origami
                expand-region
                tabbar
+               elpy
+               flycheck
+               py-autopep8
                ) "Default packages")
 
 (defun johnson/packages-installed-p ()
@@ -64,6 +67,18 @@
 
 ;;Config for tabbar
 (tabbar-mode 1)
+
+;;Config for Emacs Lisp Python Environment
+(elpy-enable)
+
+;;Use flycheck instead of flymake in elpy
+(when (require 'flycheck nil t)
+  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+  (add-hook 'elpy-mode-hook 'flycheck-mode))
+
+;;Formatting python files by PEP8 rules on saving
+(require 'py-autopep8)
+(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 
 (load-theme 'monokai t)
 

@@ -6,10 +6,12 @@
  ;; If there is more than one, they won't work right.
  '(company-idle-delay 0.08)
  '(counsel-find-file-ignore-regexp "\\`\\.")
+ '(elpy-rpc-python-command "~/bin/python/python")
  '(ivy-extra-directories nil)
  '(package-selected-packages
    (quote
     (xcscope smartparens popwin monokai-theme counsel company)))
+ '(python-shell-interpreter "~/bin/python/python")
  '(tabbar-scroll-left-button
    (quote
     ((" ⤆ "
