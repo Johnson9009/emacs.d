@@ -20,6 +20,7 @@
                elpy
                flycheck
                py-autopep8
+               mwim
                ) "Default packages")
 
 (defun johnson/packages-installed-p ()
