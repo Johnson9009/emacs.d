@@ -17,6 +17,8 @@
                origami
                expand-region
                tabbar
+               yasnippet
+               auto-yasnippet
                elpy
                flycheck
                py-autopep8
@@ -80,6 +82,11 @@
 ;;Formatting python files by PEP8 rules on saving
 (require 'py-autopep8)
 (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
+
+;;Use YASnippet as a non-global minor mode, call yas-reload-all to load the snippet tables and then call yas-minor-mode
+;;from the hooks of major-modes where we want YASnippet enabled.
+(yas-reload-all)
+(add-hook 'prog-mode-hook #'yas-minor-mode)
 
 (load-theme 'monokai t)
 
